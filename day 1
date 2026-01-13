@@ -1,0 +1,17 @@
+pwd = current working directory
+whoami= detials of os
+uname -a= display username
+cd file name = change directory
+sudo = access only root user
+sudo apt-get install= install command
+vi file name= go to editor
+nano file name= go to nano editor
+cat file name = display the file
+cp file name destination name = copy the file
+mv file name destination name = move the file
+>> = append 
+cd ..=go back 
+history = check history
+touch file name = creat empty folder
+echo " "= display the input
+
