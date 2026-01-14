@@ -1,0 +1,4 @@
+~/ = directly denote home directory
+-p = make multiple directory inside the directory
+cd ../.. go back to directories
+cd - = go to last working directory
