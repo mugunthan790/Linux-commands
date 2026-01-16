@@ -15,5 +15,5 @@ mv file name destination name = move the file
 cd ..=go back to directory
 history = check history
 touch file name = creat empty folder
-echo " "= display the input
+echo " "= display the input.
 
