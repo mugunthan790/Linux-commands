@@ -4,3 +4,5 @@ ls = list
 -t: Sorts by modification time (most recent first).
 -S: Sorts by file size (largest to smallest).
 -a: show hiden files
+ln = make hard link using this command
+ln -s = make soft link using this command
