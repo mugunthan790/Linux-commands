@@ -1,0 +1,6 @@
+ls = list
+-l: Long listing format, showing permissions, size, etc.
+-s: Shows file size in blocks.
+-t: Sorts by modification time (most recent first).
+-S: Sorts by file size (largest to smallest).
+-a: show hiden files
