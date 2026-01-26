@@ -1,3 +1,5 @@
 alias : set a short name for big command 
          example{alias txt="cd home/mugunthan/practice/txt"}
          it storde temporary after closing terminal its will erase
+nohup : use to run programs in background
+           example {nohup python3 data_processing.py >> data_process.log &}
