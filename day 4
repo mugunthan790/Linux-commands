@@ -3,3 +3,8 @@ alias : set a short name for big command
          it storde temporary after closing terminal its will erase
 nohup : use to run programs in background
            example {nohup python3 data_processing.py >> data_process.log &}
+top : act like a task manager
+ps : process status
+      -a :  Show processes for all users, not just the current one
+      -U  :  Show the user who owns the process and display in user format
+      -X  :  Show processes not attached to a terminal (background/daemon stuff)
