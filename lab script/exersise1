@@ -1,0 +1,96 @@
+#!/bin/bash
+
+clear
+echo "Linux Commands"
+echo "**************"
+echo "1. Removing Files"
+echo "2. Copying Files"
+echo "3. File Display - cat"
+echo "4. Move the file"
+echo "5. Comparing Files"
+echo "6. Word Count"
+echo "7. Split the file"
+echo "8. Find the Difference"
+echo "Enter the number of choice"
+read a
+
+if [ "$a" -eq 1 ]
+then
+    echo "List of files"
+    echo "-------------"
+    ls
+    echo "Removing originalfile.txt..."
+    rm originalfile.txt
+    echo "List of files after removing file"
+    echo "--------------------------------"
+    ls
+
+elif [ "$a" -eq 2 ]
+then
+    echo "Content of originalfile.txt"
+    echo "----------------------------"
+    cat originalfile.txt
+    echo
+    echo "Copying originalfile.txt to copiedfile.txt..."
+    cp originalfile.txt copiedfile.txt
+    echo "Content of copiedfile.txt"
+    echo "-------------------------"
+    cat copiedfile.txt
+
+elif [ "$a" -eq 3 ]
+then
+    echo "Displaying content of copiedfile.txt"
+    echo "-----------------------------------"
+    cat copiedfile.txt
+
+elif [ "$a" -eq 4 ]
+then
+    echo "Moving copiedfile.txt to movedfile.txt"
+    echo "--------------------------------------"
+    mv copiedfile.txt movedfile.txt
+    echo "Content of movedfile.txt"
+    cat movedfile.txt
+
+elif [ "$a" -eq 5 ]
+then
+    echo "Content of originalfile.txt"
+    cat originalfile.txt
+    echo
+    echo "Content of movedfile.txt"
+    cat movedfile.txt
+    echo
+    echo "Comparing files using cmp command"
+    cmp originalfile.txt movedfile.txt
+
+elif [ "$a" -eq 6 ]
+then
+    echo "Content of originalfile.txt"
+    cat originalfile.txt
+    echo
+    echo "Word count using wc command"
+    wc originalfile.txt
+
+elif [ "$a" -eq 7 ]
+then
+    echo "Content of movedfile"
+    cat movedfile.txt
+    echo
+    echo "Splitting file into 3-line chunks..."
+    split -l 3 movedfile.txt splitedfile.txt
+    echo "Split files:"
+    ls splitedfile.txt*
+
+elif [ "$a" -eq 8 ]
+then
+    echo "Content of originalfile.txt"
+    cat originalfile.txt
+    echo
+    echo "Content of copiedfile.txt"
+    cat copiedfile.txt
+    echo
+    echo "Difference between the files"
+    diff originalfile.txt copiedfile.txt
+
+else
+    echo "Invalid Choice "
+fi
