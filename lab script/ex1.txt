@@ -1,0 +1,48 @@
+#!/bin/bash
+
+clear
+
+echo "1. Current user and login name"
+echo "2. Current shell, home directory, OS, PATH, working directory"
+echo "3. Currently logged-in users and available shells"
+echo "4. CPU information (processor type and speed)"
+echo "5. Memory information"
+echo
+read -p "Enter your choice: " a
+
+case $a in
+    1)
+        echo "Current user and login name:"
+        whoami
+        ;;
+        
+    2)
+        echo "Current shell: $SHELL"
+        echo "Home directory: $HOME"
+        echo "Operating system: $(uname -o)"
+        echo "Current PATH: $PATH"
+        echo "Current working directory: $(pwd)"
+        ;;
+        
+    3)
+        echo "Currently logged-in users:"
+        who
+        echo
+        echo "Available shells:"
+        cat /etc/shells
+        ;;
+        
+    4)
+        echo "CPU information:"
+        lscpu | grep -E "Model name|CPU MHz"
+        ;;
+        
+    5)
+        echo "Memory information:"
+        free -h
+        ;;
+        
+    *)
+        echo "Invalid choice. Please enter a number between 1 and 5."
+        ;;
+esac
